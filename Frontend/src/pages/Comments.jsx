@@ -27,7 +27,7 @@ const Comments = () => {
     loading,
     error,
   } = useFetch(
-    `http://localhost:3000/api/comment/get-all-comment`,
+    `https://blog-mjx4.onrender.com/api/comment/get-all-comment`,
     {
       method: "get",
       credentials: "include",

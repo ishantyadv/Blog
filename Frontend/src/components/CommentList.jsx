@@ -9,7 +9,7 @@ import usericon from '@/assets/images/user.png'
 
 const CommentList = ({props}) => {
     const user = useSelector((state) => state.user)
-     const {data, loading, error} = useFetch(`http://localhost:3000/api/comment/get/${props.blogid}`, {
+     const {data, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/comment/get/${props.blogid}`, {
                 method: 'get',
                 credentials: 'include',
                

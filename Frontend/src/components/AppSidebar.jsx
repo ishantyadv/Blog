@@ -25,7 +25,7 @@ import { useSelector } from 'react-redux'
 
 const AppSidebar = () => {
  const user = useSelector(state => state.user)
- const {data: categoryData} = useFetch(`http://localhost:3000/api/category/allcategory`,{
+ const {data: categoryData} = useFetch(`https://blog-mjx4.onrender.com/api/category/allcategory`,{
         method: 'get',
         credentials: 'include'
     })

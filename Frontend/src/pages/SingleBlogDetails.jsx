@@ -20,7 +20,7 @@ const SingleBlogDetails = () => {
 
     const {blog, category} = useParams()
     // console.log(category)
-    const {data, loading, error} = useFetch(`http://localhost:3000/api/blog/getblog/${blog}`, {
+    const {data, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/blog/getblog/${blog}`, {
       method: 'get',
       credentials: 'include',
      

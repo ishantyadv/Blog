@@ -16,7 +16,7 @@ import { useFetch } from '@/hooks/useFetch'
 const EditCategory = () => {
     const { category_id } = useParams()
     // console.log(category_id)
-    const {data: categoryData, loading, error} = useFetch(`http://localhost:3000/api/category/show/${category_id}`,{
+    const {data: categoryData, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/category/show/${category_id}`,{
             method: 'get',
             credentials: 'include'
         },[category_id])
@@ -58,7 +58,7 @@ const EditCategory = () => {
         
          async function onSubmit(values) {
              try {
-              const response = await fetch(`http://localhost:3000/api/category/update/${category_id}`,{
+              const response = await fetch(`https://blog-mjx4.onrender.com/api/category/update/${category_id}`,{
                 method: 'put',
                 headers: {'content-type' : 'application/json'},
                 body: JSON.stringify(values)

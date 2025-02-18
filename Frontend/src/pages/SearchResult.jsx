@@ -9,7 +9,7 @@ const SearchResult = () => {
   const q = searchParams.get('q')
 
 
-const {data: blogData, loading, error} = useFetch(`http://localhost:3000/api/blog/search?q=${q}`,{
+const {data: blogData, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/blog/search?q=${q}`,{
         method: 'get',
         credentials: 'include'
     })

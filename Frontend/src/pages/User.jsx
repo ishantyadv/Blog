@@ -29,7 +29,7 @@ const User = () => {
     loading,
     error,
   } = useFetch(
-    `http://localhost:3000/user/get-all-user`,
+    `https://blog-mjx4.onrender.com/user/get-all-user`,
     {
       method: "get",
       credentials: "include",
@@ -39,7 +39,7 @@ const User = () => {
 
   const handleDelete = async (id) => {
     const response = await deleteData(
-      `http://localhost:3000/api/user/delete/${id}`
+      `https://blog-mjx4.onrender.com/api/user/delete/${id}`
     );
     if (response) {
       setRefreshData(!refreshData);

@@ -24,7 +24,7 @@ const Profile = () => {
     const [file, setFile] = useState()
     const user = useSelector((state) => state.user)
 
-    const { data: userData, loading, error } = useFetch(`http://localhost:3000/api/user/getuser/${user.user._id}`,
+    const { data: userData, loading, error } = useFetch(`https://blog-mjx4.onrender.com/api/user/getuser/${user.user._id}`,
         { method: 'get', credentials: 'include' },
 
     )
@@ -67,7 +67,7 @@ const Profile = () => {
             formData.append('file', file)
             formData.append('data', JSON.stringify(values))
 
-            const response = await fetch(`http://localhost:3000/api/user/updateuser/${userData.user._id}`, {
+            const response = await fetch(`https://blog-mjx4.onrender.com/api/user/updateuser/${userData.user._id}`, {
                 method: 'put',
                 credentials: 'include',
                 body: formData

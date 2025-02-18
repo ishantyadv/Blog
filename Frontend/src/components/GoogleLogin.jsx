@@ -27,7 +27,7 @@ const GoogleLogin = () => {
                 email: user.email,
                 avatar: user.photoURL
              }   
-                      const response = await fetch(`http://localhost:3000/api/auth/googlelogin`,{
+                      const response = await fetch(`https://blog-mjx4.onrender.com/api/auth/googlelogin`,{
                         method: 'POST',
                         headers: {'Content-Type' : 'application/json'},
                         credentials: 'include',

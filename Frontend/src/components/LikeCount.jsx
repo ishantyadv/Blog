@@ -11,7 +11,7 @@ const LikeCount = ({props}) => {
   const [hasLiked, setHasLiked] = useState(false)
   const user = useSelector((state) => state.user)
   const { data: blogLikeCount, loading, error } = useFetch(
-      `http://localhost:3000/api/blog-like/getlike/${props.blogid}/${user && user.isLoggedIn ? user.user._id : ''}`,
+      `https://blog-mjx4.onrender.com/api/blog-like/getlike/${props.blogid}/${user && user.isLoggedIn ? user.user._id : ''}`,
       {
         method: "get",
         credentials: "include",
@@ -31,7 +31,7 @@ const LikeCount = ({props}) => {
           return showToast('error', 'Please login into your account')
         }
 
-        const response = await fetch(`http://localhost:3000/api/blog-like/dolike/`,{
+        const response = await fetch(`https://blog-mjx4.onrender.com/api/blog-like/dolike/`,{
           method: 'post',
           credentials: 'include',
           headers: {'Content-type' : "application/json"},

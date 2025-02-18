@@ -6,7 +6,7 @@ import { FaRegComment } from "react-icons/fa";
 
 const CommentCount = ({ props }) => {
   const { data, loading, error } = useFetch(
-    `http://localhost:3000/api/comment/getcount/${props.blogid}`,
+    `https://blog-mjx4.onrender.com/api/comment/getcount/${props.blogid}`,
     {
       method: "get",
       credentials: "include",

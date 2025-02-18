@@ -24,13 +24,13 @@ import moment from 'moment'
 const BlogDetails = () => {
 
   const [refreshData, setRefreshData] = useState(false)
-  const {data: blogData, loading, error} = useFetch(`http://localhost:3000/api/blog/getall`,{
+  const {data: blogData, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/blog/getall`,{
       method: 'get',
       credentials: 'include'
   },[refreshData])
 
  const handleDelete = (id) => {
-  const response = deleteData(`http://localhost:3000/api/blog/delete/${id}`)
+  const response = deleteData(`https://blog-mjx4.onrender.com/api/blog/delete/${id}`)
   if(response){
       setRefreshData(!refreshData)
       showToast('success', 'Data deleted.')

@@ -9,7 +9,7 @@ import { TbCategory } from "react-icons/tb";
 const BlogByCategory = () => {
 
     const {category} = useParams()
-    const {data: blogData, loading, error} = useFetch(`http://localhost:3000/api/blog/get-blog-by-category/${category}`,{
+    const {data: blogData, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/blog/get-blog-by-category/${category}`,{
         method: 'get',
         credentials: 'include'
     },[category])

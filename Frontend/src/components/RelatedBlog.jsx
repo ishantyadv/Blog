@@ -7,7 +7,7 @@ import { RouteBlogDetails } from "@/helpers/RouteName";
 
 const RelatedBlog = ({ props }) => {
   const { data, loading, error } = useFetch(
-    `http://localhost:3000/api/blog/getrelatedblog/${props.category}/${props.currentBlog}`,
+    `https://blog-mjx4.onrender.com/api/blog/getrelatedblog/${props.category}/${props.currentBlog}`,
     {
       method: "get",
       credentials: "include",

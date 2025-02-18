@@ -23,13 +23,13 @@ import { showToast } from '@/helpers/ShowToast'
 
 const CategoryDetails = () => {
     const [refreshData, setRefreshData] = useState(false)
-    const {data: categoryData, loading, error} = useFetch(`http://localhost:3000/api/category/allcategory`,{
+    const {data: categoryData, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/category/allcategory`,{
         method: 'get',
         credentials: 'include'
     },[refreshData])
 
    const handleDelete = (id) => {
-    const response = deleteData(`http://localhost:3000/api/category/delete/${id}`)
+    const response = deleteData(`https://blog-mjx4.onrender.com/api/category/delete/${id}`)
     if(response){
         setRefreshData(!refreshData)
         showToast('success', 'Data deleted.')

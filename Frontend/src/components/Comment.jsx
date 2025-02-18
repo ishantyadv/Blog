@@ -41,7 +41,7 @@ const Comment = ({props}) => {
     try {
         const newValues = {...values, blogid: props.blogid, user: user.user._id}
       const response = await fetch(
-        `http://localhost:3000/api/comment/add`,
+        `https://blog-mjx4.onrender.com/api/comment/add`,
         {
           method: "POST",
           credentials: "include",

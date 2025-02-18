@@ -37,7 +37,7 @@ const AddBlog = () => {
     data: categoryData,
     loading,
     error,
-  } = useFetch(`http://localhost:3000/api/category/allcategory`, {
+  } = useFetch(`https://blog-mjx4.onrender.com/api/category/allcategory`, {
     method: "get",
     credentials: "include",
   });
@@ -89,7 +89,7 @@ const AddBlog = () => {
       formData.append("file", file);
       formData.append("data", JSON.stringify(newValues));
 
-      const response = await fetch(`http://localhost:3000/api/blog/add`, {
+      const response = await fetch(`https://blog-mjx4.onrender.com/api/blog/add`, {
         method: "post",
         credentials: "include",
         headers: {

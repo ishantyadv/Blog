@@ -37,7 +37,7 @@ const EditBlog = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
   const { data: categoryData } = useFetch(
-    `http://localhost:3000/api/category/allcategory`,
+    `https://blog-mjx4.onrender.com/api/category/allcategory`,
     {
       method: "get",
       credentials: "include",
@@ -45,7 +45,7 @@ const EditBlog = () => {
   );
 
   const { data: blogData, loading: blogLoading } = useFetch(
-    `http://localhost:3000/api/blog/edit/${blogid}`,
+    `https://blog-mjx4.onrender.com/api/blog/edit/${blogid}`,
     {
       method: "get",
       credentials: "include",
@@ -109,7 +109,7 @@ const EditBlog = () => {
       formData.append("data", JSON.stringify(values));
 
       const response = await fetch(
-        `http://localhost:3000/api/blog/update/${blogid}`,
+        `https://blog-mjx4.onrender.com/api/blog/update/${blogid}`,
         {
           method: "put",
           credentials: "include",

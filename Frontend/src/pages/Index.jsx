@@ -6,7 +6,7 @@ import BlogCard from '@/components/BlogCard'
 
 const Index = () => {
     
-  const {data: blogData, loading, error} = useFetch(`http://localhost:3000/api/blog/blogs`,{
+  const {data: blogData, loading, error} = useFetch(`https://blog-mjx4.onrender.com/api/blog/blogs`,{
         method: 'get',
         credentials: 'include'
     })
